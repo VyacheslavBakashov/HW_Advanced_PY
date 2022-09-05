@@ -60,7 +60,7 @@ def find_habr_articles2(key_words: list, number_of_pages=1):
 
     base_url = 'https://habr.com'
     headers = Headers(os='win', headers=True).generate()
-    pattern = fr"\s({'|'.join(key_words)})\s"
+    pattern = fr"({'|'.join(key_words)})"
     result = []
 
     for page in range(1, number_of_pages + 1):
